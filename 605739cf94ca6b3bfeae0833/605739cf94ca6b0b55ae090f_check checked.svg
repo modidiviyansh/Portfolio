@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="39px" height="21px" viewBox="0 0 39 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>check checked</title>
+    <g id="check-checked" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle id="Oval" stroke="#006DDB" stroke-width="2" fill="#006DDB" cx="10.5" cy="10.5" r="9.5"></circle>
+        <polyline id="Path-3" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="6 11.0433108 9.31783528 14.7603001 15.0360084 7"></polyline>
+    </g>
+</svg>
