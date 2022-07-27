@@ -1,3 +1,9 @@
-User-agent:
-disallow: /entirefoldertoNOTaccess/*
-Allow: /entirefoldertoNOTaccess/butgrantaccesstofile.js
+user-agent: *
+Disallow: /.vs/*
+Disallow: /metadata/*
+Disallow: /js/*
+Disallow: /modi/*
+Disallow: /projects_otherWebsites/*
+Disallow: /static/*
+Disallow: /swiper@8.2.6/*
+Disallow: /605739cf94ca6b3bfeae0833/*
