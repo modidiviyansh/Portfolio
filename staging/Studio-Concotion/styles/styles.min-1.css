@@ -1,0 +1,2812 @@
+! locomotive-scroll v4.100.1 | mit license | https://github.com/locomotivemtl/locomotive-scroll.c-scrollbar,.c-scrollbar_thumb
+{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+body,
+html {
+  width: 100%;
+  font-size: 17px;
+  font-family: var(--source-sans-pro);
+  font-family: var(--source-sans-pro);
+}
+h2 span,
+h3 span {
+  margin-bottom: 3%;
+  letter-spacing: 0.2vw;
+  text-transform: uppercase;
+}
+h1 span,
+h2 span,
+h3 span {
+  text-transform: uppercase;
+}
+a img,
+body,
+li,
+ul {
+  margin: 0;
+}
+input,
+textarea {
+  background: url(../images/bg_blank.png);
+}
+#secAboutUs .secClients .flickity-viewport,
+#secIndex .secServices .flickity-viewport,
+.has-scroll-smooth body,
+html.has-scroll-smooth {
+  overflow: hidden;
+}
+html.has-scroll-dragging {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+#btnMenu,
+aside.fullNavi {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+}
+.has-scroll-smooth [data-scroll-container] {
+  min-height: calc(100vh + 100px);
+}
+[data-scroll-direction="horizontal"] [data-scroll-container] {
+  height: 100vh;
+  display: inline-block;
+  white-space: nowrap;
+}
+[data-scroll-direction="horizontal"] [data-scroll-section] {
+  display: inline-block;
+  vertical-align: top;
+  white-space: nowrap;
+  height: 100%;
+}
+.c-scrollbar {
+  width: 11px;
+  height: 100%;
+  transform-origin: center right;
+  transition: transform 0.3s, opacity 0.3s;
+  opacity: 0;
+}
+.txt10x10,
+.txt2x2,
+.txt5x5,
+.txt6x4 {
+  height: auto;
+}
+.fixed-header,
+header,
+input[type="submit"]:hover {
+  transition: top 0.2s ease-out;
+}
+.c-scrollbar:hover {
+  transform: scaleX(1.45);
+}
+#secIndex .secServices .contentHolder.appear,
+.c-scrollbar:hover,
+.cursorCircle.active,
+.cursorCircle.hvLink:before,
+.has-scroll-dragging .c-scrollbar,
+.has-scroll-scrolling .c-scrollbar {
+  opacity: 1;
+}
+[data-scroll-direction="horizontal"] .c-scrollbar {
+  width: 100%;
+  height: 10px;
+  top: auto;
+  bottom: 0;
+  transform: scaleY(1);
+}
+[data-scroll-direction="horizontal"] .c-scrollbar:hover {
+  transform: scaleY(1.3);
+}
+.c-scrollbar_thumb {
+  background-color: #000;
+  opacity: 0.5;
+  width: 7px;
+  border-radius: 10px;
+  margin: 2px;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+a img,
+input,
+textarea {
+  border: none;
+  padding: 0;
+}
+.has-scroll-dragging .c-scrollbar_thumb {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+[data-scroll-direction="horizontal"] .c-scrollbar_thumb {
+  right: auto;
+  bottom: 0;
+}
+#secContactUs .secIntro .linesHolder .texture02,
+.defListingHolder li:last-child:after,
+.nav-hide,
+noscript img {
+  display: none;
+}
+noscript iframe {
+  display: none;
+  visibility: hidden;
+}
+*,
+:after,
+:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+:root {
+  --black: rgba(19, 19, 29, 1);
+  --dark-blue: rgba(26, 26, 39, 1);
+  --full-white: rgba(255, 255, 255, 1);
+  --white: rgba(240, 237, 242, 1);
+  --red: rgba(236, 90, 100, 1);
+  --light-grey01: rgba(122, 112, 117, 0.3);
+  --border-light-grey01: 1px solid rgba(122, 112, 117, 0.2);
+  --border-light-grey02: 1px solid rgba(122, 112, 117, 0.3);
+  --border-dark: 1px solid rgba(40, 40, 51, 1);
+  --border-pink: 1px solid rgba(179, 131, 76, 1);
+  --border-white: 1px solid rgba(240, 237, 242, 1);
+  --source-sans-pro: "Source Sans Pro", sans-serif;
+  --white-space01: 0 3%;
+  --white-space02: 3% 3%;
+  --white-space03: 0 12%;
+  --space100: 100px;
+  --space125: 125px;
+  --space50: 50px;
+  --space45: 3%;
+  --space30: 30px;
+  --space12p: 12%;
+  --space0: 0px;
+}
+html {
+  background: var(--white);
+}
+body {
+  height: 100%;
+  background-attachment: fixed;
+  padding: 0;
+  font-weight: 300;
+  line-height: 1.667;
+  box-sizing: border-box;
+  color: var(--black);
+}
+div,
+fieldset,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+header,
+input,
+label,
+p,
+section,
+select,
+select option,
+td,
+textarea,
+th,
+tr {
+  font-family: var(--source-sans-pro);
+  font-size: 1vw;
+  font-weight: 300;
+  line-height: 1.75;
+  color: #252532;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+h2,
+h3 {
+  margin-bottom: 5%;
+}
+input,
+select {
+  height: 40px;
+  margin: 5px 0 20px;
+  width: 100%;
+  -webkit-appearance: none;
+}
+#secServices .secServiceListing h2,
+h1 span {
+  margin-bottom: 2%;
+}
+h1 {
+  margin-bottom: 70px;
+  font-size: 4.5vw;
+  color: var(--dark-blue);
+  font-weight: 300;
+  line-height: 1.2;
+}
+#preloader .txtLoader01 p,
+h2 {
+  font-size: 2.3vw;
+  font-weight: 300;
+}
+h1 strong {
+  font-weight: 300;
+}
+h1 span {
+  font-weight: 300;
+  font-size: 0.9vw;
+  letter-spacing: 0.3vw;
+  display: block;
+  -webkit-filter: blur(3px);
+  -moz-filter: blur(3px);
+  -o-filter: blur(3px);
+  -ms-filter: blur(3px);
+  opacity: 0;
+  transition: 0.7s ease-out 1s;
+}
+h1 span.line {
+  margin-bottom: 0;
+  margin-top: 5px;
+  font-weight: 300;
+  font-size: inherit;
+  text-transform: none;
+  letter-spacing: -1px;
+}
+.secIntro .linesHolder .titleHolder.appear,
+h1 span.appear {
+  margin-top: 0;
+  -webkit-filter: blur(0px);
+  -moz-filter: blur(0px);
+  -o-filter: blur(0px);
+  -ms-filter: blur(0px);
+  opacity: 1;
+}
+h1 span:nth-child(2).appear {
+  transition-delay: 1.2s;
+}
+h1 span:nth-child(3).appear {
+  transition-delay: 1.4s;
+}
+h1 span:nth-child(4).appear {
+  transition-delay: 1.6s;
+}
+h2 {
+  line-height: 1.35;
+}
+h2 span {
+  font-weight: 300;
+  font-size: 0.8vw;
+  display: block;
+}
+h3 {
+  font-size: 1.7vw;
+  font-weight: 400;
+  line-height: 1.5;
+}
+footer .secFooterInfo .contentHolder p,
+h4 {
+  line-height: 2;
+}
+h3 span {
+  font-weight: 300;
+  font-size: 1vw;
+  display: block;
+}
+h4 {
+  font-size: 1.15vw;
+  text-transform: uppercase;
+}
+.tabNavi li,
+h5 {
+  font-size: 0.8vw;
+  text-transform: uppercase;
+}
+h5 {
+  line-height: 1.2;
+}
+p {
+  font-size: 1.15vw;
+  margin-bottom: 35px;
+}
+li,
+ul {
+  padding: 0;
+  list-style: none;
+  display: block;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a img {
+  display: block;
+  pointer-events: none;
+}
+input {
+  border-bottom: 1px solid #282833;
+  border-radius: 0;
+}
+textarea {
+  width: 100%;
+  height: 125px;
+  margin: 5px 0 0;
+  border-bottom: 1px solid #282833;
+  border-radius: 0;
+  -webkit-appearance: none;
+}
+select {
+  padding: 0 0 3px;
+  background: url(../images/ico-arrow-bottom-dark.png) right center no-repeat;
+  border: none;
+  border-bottom: 1px solid #282833;
+  border-radius: 0;
+}
+input:active,
+select:active,
+textarea:active {
+  border-bottom: 1px solid #000;
+}
+footer .secCopyright .socialHolder li a,
+label {
+  display: block;
+}
+input[type="submit"] {
+  width: 150px;
+  height: 45px;
+  margin-top: 20px;
+  padding: 0;
+  border: 1px solid #282833;
+  border-radius: 0;
+  font-weight: 700;
+  -webkit-appearance: none;
+  cursor: pointer;
+  transition: 0.2s ease-out;
+}
+input[type="submit"]:hover {
+  background-color: #282833;
+  background-image: none;
+  color: #ececec;
+}
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 0;
+  border-bottom: 1px solid #000;
+}
+:focus {
+  outline: 0;
+}
+img,
+video {
+  pointer-events: none;
+}
+.clearBoth {
+  clear: both;
+}
+.colorDarkBlue {
+  color: #1e212e;
+}
+.colorRed {
+  color: #eb3d6d;
+}
+.headingHolder {
+  position: relative;
+  padding-left: 10%;
+}
+.txt2x2 {
+  width: 40px;
+}
+.txt5x5 {
+  width: 120px;
+}
+.txt6x4 {
+  width: 150px;
+}
+.txt10x10 {
+  width: 250px;
+}
+.btnCTA a {
+  position: relative;
+  letter-spacing: 0.5vw;
+  text-transform: uppercase;
+}
+.btnCTA a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--black);
+  content: "";
+}
+.cursorCircle {
+  position: absolute;
+  z-index: 22;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0;
+}
+.cursorCircle.remove {
+  opacity: 0;
+  transition: 0.3s;
+}
+.cursorCircle:after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #000;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  content: "";
+}
+.cursorCircle:before {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 0.7vw;
+  color: var(--white);
+  line-height: 1;
+  content: "Click";
+  opacity: 0;
+}
+.cursorCircle.hvLink:after {
+  width: 60px;
+  height: 60px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 1px solid transparent;
+  transition: 0.3s;
+}
+.dot-flashing,
+.dot-flashing::after,
+.dot-flashing::before {
+  width: 3px;
+  height: 3px;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: rgba(0, 0, 0, 0.3);
+}
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--black);
+  z-index: 1100;
+  width: 100%;
+  height: 100%;
+}
+#preloader .wrapper {
+  position: absolute;
+  left: var(--space45);
+  right: var(--space45);
+  bottom: 10%;
+}
+#preloader p,
+#secIndex #preloader p {
+  color: var(--red);
+  margin-bottom: 0;
+}
+#preloader .txtLoader01 {
+  width: 100%;
+  display: flex;
+  align-items: baseline;
+}
+#preloader .txtLoader01 p {
+  letter-spacing: 4px;
+  margin-right: 20px;
+}
+#preloader .txtLoader02,
+#secAboutUs,
+#secContactUs,
+#secContactUs .secIntro .headingHolder p,
+#secDefaultDetails,
+#secDefaultListing,
+#secIndex,
+#secPortDetails,
+#secServices {
+  width: 100%;
+}
+#preloader .txtLoader02 p {
+  font-size: 12vw;
+  letter-spacing: 1px;
+  line-height: 1;
+  font-weight: 200;
+}
+.dot-flashing {
+  position: relative;
+  animation: 1s linear 0.5s infinite alternate dotFlashing;
+}
+.dot-flashing::after,
+.dot-flashing::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+}
+.dot-flashing::before {
+  left: -15px;
+  animation: 1s infinite alternate dotFlashing;
+}
+.dot-flashing::after {
+  left: 15px;
+  animation: 1s 1s infinite alternate dotFlashing;
+}
+@keyframes dotFlashing {
+  0% {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  100%,
+  50% {
+    background-color: var(--red);
+  }
+}
+#theContainer::before {
+  z-index: 1101;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+header {
+  position: absolute;
+  top: 0;
+  z-index: 21;
+  width: 100%;
+  height: 155px;
+}
+header .widthWrapper {
+  position: relative;
+  margin: var(--white-space02);
+}
+header .logoHolder {
+  width: 8vw;
+  float: left;
+}
+header .logoHolder img {
+  width: 100%;
+  height: 100%;
+}
+header .secServNavi {
+  width: 70%;
+  margin: 0 auto;
+  padding-top: 5vh;
+  display: flex;
+  justify-content: center;
+}
+header .secServNavi li,
+header .secTopMenu li {
+  padding: 0 5% 0 0;
+  font-size: 1vw;
+  text-transform: uppercase;
+  letter-spacing: 0.15vw;
+  line-height: 1.2;
+}
+header .secServNavi li:last-child,
+header .secTopMenu li:last-child {
+  padding: 0;
+}
+header .secServNavi li a,
+header .secTopMenu li a {
+  text-decoration: none;
+  display: block;
+}
+header .secTopMenu {
+  float: right;
+  width: auto;
+  padding-top: 5vh;
+  display: flex;
+  justify-content: right;
+}
+header .secTopMenu ul {
+  padding: 0 30px 0 0;
+}
+#btnMenu {
+  position: relative;
+  top: -3px;
+  width: 30px;
+  cursor: pointer;
+  user-select: none;
+}
+#btnMenu .bar1,
+#btnMenu .bar2,
+#btnMenu .bar3 {
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  background-color: var(--black);
+  margin-right: 3px;
+  transition: 0.5s;
+  display: inline-block;
+  transform-origin: 0 0;
+}
+#btnMenu .bar1,
+#secIndex .secServices .faqHolder li:first-child,
+.defListingHolder li:first-child,
+.secAwards .secListing li:first-child,
+secPortfolio .secListing li:first-child {
+  top: 0;
+}
+#btnMenu .bar2 {
+  top: 10px;
+}
+#btnMenu .bar3 {
+  top: 20px;
+}
+#secIndex #btnMenu .bar1,
+#secIndex #btnMenu .bar2,
+#secIndex #btnMenu .bar3,
+#secIndex .btnCTA a:after,
+.colorWhite .bar1,
+.colorWhite .bar2,
+.colorWhite .bar3 {
+  background-color: var(--white);
+}
+.change .bar1,
+.change .bar2,
+.change .bar3 {
+  margin-top: -10px;
+  opacity: 0;
+}
+.fixed-header {
+  position: fixed;
+  height: 110px;
+}
+.fixed-header .secServNavi {
+  opacity: 0;
+  display: none;
+}
+.fixed-header .logoHolder,
+.fixed-header .secTopMenu li {
+  opacity: 0;
+}
+#btnMenu.scroll .bar1,
+#btnMenu.scroll .bar2,
+#btnMenu.scroll .bar3 {
+  filter: brightness(10%);
+}
+footer {
+  background: url(../images/bg-footer.gif) no-repeat bottom right var(--black);
+  background-size: 100% auto;
+  padding: var(--space100) var(--space12p);
+  color: var(--white);
+}
+footer div,
+footer h2,
+footer h3,
+footer h4,
+footer input,
+footer input::placeholder,
+footer p,
+footer span {
+  color: var(--white);
+}
+footer .secCTA {
+  padding-bottom: 0;
+}
+footer .secCTA h2 {
+  font-size: 3.7vw;
+  font-weight: 300;
+}
+footer .secCTA a {
+  color: var(--red);
+  display: block;
+}
+footer .secFooterInfo {
+  padding-bottom: 60px;
+  display: flex;
+  justify-content: space-between;
+}
+footer .secFooterInfo .contentHolder {
+  width: 55%;
+}
+footer .secFooterInfo .servHolder,
+footer .secPartners ul {
+  display: flex;
+}
+footer .secFooterInfo .servHolder li {
+  margin-right: 15px;
+}
+footer .secFooterInfo .servHolder li:last-child {
+  margin-right: 0;
+}
+footer .secFooterInfo .servHolder li:after {
+  padding-left: 15px;
+  content: "/";
+}
+footer .secFooterInfo .servHolder li:last-child:after {
+  padding-left: 0;
+  content: "";
+}
+footer .secFooterInfo .formHolder {
+  width: 38%;
+}
+footer .secFooterInfo .formHolder input {
+  border-bottom: var(--border-light-grey02);
+}
+footer .secFooterInfo .formHolder input[type="submit"] {
+  border: var(--border-white);
+}
+footer .secPartners {
+  padding: 35px 0 0;
+  border-top: var(--border-light-grey02);
+  display: flex;
+  align-items: center;
+}
+footer .secPartners p {
+  margin-right: 30px;
+}
+footer .secPartners li {
+  margin-right: 20px;
+}
+footer .secPartners li img {
+  width: auto;
+  max-height: 40px;
+  object-fit: cover;
+  margin-bottom: 30px;
+  display: block;
+}
+footer .secCopyright {
+  padding-top: 55px;
+  border-top: var(--border-light-grey02);
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+footer .secCopyright .socialHolder {
+  width: 25%;
+}
+footer .secCopyright .socialHolder ul {
+  display: flex;
+  justify-content: right;
+}
+footer .secCopyright .socialHolder li {
+  padding: 0 0 0 20px;
+}
+footer .secCopyright .socialHolder li img {
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
+}
+footer .secCopyright .socialHolder li:last-child {
+  background: 0 0;
+}
+footer .secCopyright .copyHolder {
+  width: 70%;
+}
+footer .secCopyright .copyHolder a {
+  display: inline;
+}
+.naviSlideOut {
+  margin-top: -30px;
+  opacity: 0;
+  transition: 0.5s ease-out;
+}
+aside.fullNavi {
+  position: fixed;
+  z-index: 122;
+  top: 0;
+  left: 0;
+  background: var(--black);
+  background-attachment: fixed;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  user-select: none;
+  display: none;
+}
+#secIndex .btnCTA a,
+#secIndex .secIntro h1,
+#secIndex .secIntro h2,
+#secIndex .secIntro h3,
+#secIndex .secIntro h4,
+#secIndex .secIntro h5,
+#secIndex .secIntro p,
+#secIndex .theIndicator.white,
+#secIndex header .secServNavi li a,
+#secIndex header .secTopMenu li a,
+#secPortDetails .secNextWork h2 span,
+aside.fullNavi a,
+aside.fullNavi h1,
+aside.fullNavi h2,
+aside.fullNavi h3,
+aside.fullNavi h4,
+aside.fullNavi p {
+  color: var(--white);
+}
+aside.fullNavi .btnClose {
+  position: absolute;
+  z-index: 3;
+  top: 100px;
+  right: var(--space45);
+  width: 30px;
+  opacity: 0;
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  transition: 0.75s ease-out;
+}
+aside.fullNavi .btnClose.naviSlideIn {
+  top: 80px;
+  opacity: 1;
+  transition: 0.75s ease-out;
+}
+aside.fullNavi .btnClose .bar1,
+aside.fullNavi .btnClose .bar2 {
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  background-color: var(--white);
+  margin-right: 3px;
+  transition: 0.5s;
+  display: inline-block;
+  transform-origin: 0 0;
+}
+aside.fullNavi .btnClose .bar1 {
+  top: 0;
+  transform: rotate(45deg);
+  transform-origin: 0 0;
+}
+aside.fullNavi .btnClose .bar2 {
+  top: 1px;
+  right: -24px;
+  transform: rotate(135deg);
+  transform-origin: 0 0;
+}
+aside.fullNavi .secCopyright {
+  position: fixed;
+  bottom: 50px;
+  left: var(--space45);
+  font-size: 0.85vw;
+  color: var(--white);
+}
+aside.fullNavi .secSocial {
+  position: fixed;
+  bottom: 50px;
+  right: var(--space45);
+  text-align: right;
+}
+aside.fullNavi .secSocial p {
+  margin-bottom: 0;
+  font-size: 0.85vw;
+  color: var(--white);
+}
+aside.fullNavi .secContent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+}
+aside.fullNavi .borderHolder {
+  position: absolute;
+  left: 55%;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: rgba(236, 236, 236, 0.2);
+}
+aside.fullNavi .secMainNavi {
+  width: 55%;
+  height: 100%;
+  padding-top: 30px;
+  float: left;
+}
+aside.fullNavi .secMainNavi li {
+  margin: 0 0 20px -20px;
+  font-size: 2.3vw;
+  font-weight: 200;
+  opacity: 0;
+}
+aside.fullNavi .secMainNavi .naviSlideIn {
+  margin-left: 0;
+  opacity: 1;
+  transition: 0.5s ease-out 0.3s;
+}
+aside.fullNavi .secMainNavi li a {
+  width: 100%;
+  padding: 0 0 3px;
+  display: block;
+  transition: 0.3s ease-out;
+}
+aside.fullNavi .secMainNavi li a:hover {
+  color: var(--red);
+  margin-left: 10px;
+}
+aside.fullNavi .secContD {
+  width: 35%;
+  padding-top: 30px;
+  margin-right: -30px;
+  float: right;
+  opacity: 0;
+  transition: 0.75s ease-out 0.2s;
+}
+aside.fullNavi .secContD.naviSlideIn {
+  margin-right: 0;
+  opacity: 1;
+  transition: 0.75s ease-out 0.2s;
+}
+aside.fullNavi .secContD li {
+  margin: 0 0 20px;
+  font-size: 1.25vw;
+  color: #ececec;
+}
+aside.fullNavi .secContD li a {
+  width: 100%;
+  color: var(--white);
+  display: block;
+  transition: 0.3s ease-out;
+}
+aside.fullNavi .secContD li a:hover {
+  text-decoration: none;
+  color: var(--red);
+}
+.theIndicator {
+  position: fixed;
+  z-index: 99;
+  margin-left: -3.5vw;
+  top: 50%;
+  transform: translateY(-50%);
+  left: var(--space45);
+  text-align: center;
+  transform: rotate(90deg);
+  font-size: 0.9vw;
+  letter-spacing: 4px;
+  color: var(--black);
+  opacity: 1;
+  transition: 0.5s ease-out;
+}
+.theIndicator.white {
+  color: var(--black);
+}
+.theIndicator.scroll {
+  top: 100%;
+  opacity: 0;
+  transition: 0.5s ease-out;
+}
+.tabNavi {
+  margin-bottom: 10%;
+  margin-top: 0;
+  display: flex;
+}
+.tabNavi li {
+  position: relative;
+  padding: 0 2.5% 0 2%;
+  letter-spacing: 0.3vw;
+  white-space: nowrap;
+  display: flex;
+  justify-content: space-between;
+}
+.tabNavi li:first-child {
+  padding-left: 0;
+}
+.tabNavi li:after {
+  position: absolute;
+  right: 0;
+  content: "/";
+}
+.tabNavi li:last-child:after {
+  content: none;
+}
+.tabNavi li a.active {
+  text-decoration: underline;
+}
+.secIntro,
+.secPortfolio,
+.secPortfolio .secListing li a {
+  position: relative;
+}
+.secPortfolio .contentHolder {
+  margin: 0 var(--space12p);
+}
+.secPortfolio .contentHolder h2 {
+  width: 50%;
+}
+.secPortfolio .secListing li {
+  position: relative;
+  width: 45%;
+  float: left;
+  margin-bottom: 10%;
+  top: 150px;
+  opacity: 0;
+  transition: 0.8s ease-out;
+}
+.secPortfolio .secListing li:nth-child(2n) {
+  float: right;
+}
+.secPortfolio .secListing li:nth-child(2) {
+  padding-top: 15%;
+}
+.secPortfolio .secListing li.appear {
+  top: 0;
+  padding-bottom: 15px;
+  opacity: 1;
+}
+.secPortfolio .secListing li .imgHolder {
+  position: relative;
+  width: 100%;
+  margin-bottom: 45px;
+  overflow: hidden;
+}
+.secPortfolio .secListing li .imgHolder:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+#secAboutUs .secImg .imgHolder img,
+.secPortfolio .secListing li .imgHolder img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.secIntro h1 {
+  margin-bottom: 20px;
+}
+#secIndex .secServices .secListing li.appear,
+.secIntro .contentHolder .btnCTA.appear,
+.secIntro .contentHolder h2.appear,
+.secIntro .contentHolder h3.appear,
+.secIntro .contentHolder p.appear,
+.secIntro h1.show {
+  margin-top: 0;
+  opacity: 1;
+}
+.secIntro .videoHolder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 75%;
+  opacity: 0.25;
+  filter: blur(50px) saturate(1.4) hue-rotate(-10deg);
+  overflow: hidden;
+}
+.secIntro .videoHolder.appear {
+  opacity: 0.25;
+}
+.secIntro .videoHolder .maskHolder {
+  position: absolute;
+  z-index: 2;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 30%;
+  background: url(../images/mask-video-landing.png) bottom left/contain repeat-x;
+}
+.secIntro .videoHolder img,
+.secIntro .videoHolder video {
+  width: 110%;
+  height: 110%;
+  object-fit: cover;
+}
+.secIntro .linesHolder {
+  position: absolute;
+  width: 35%;
+  height: 100%;
+  pointer-events: none;
+  top: 0;
+  right: var(--space12p);
+  display: flex;
+  justify-content: right;
+}
+#secIndex .secPortfolio .linesHolder .line,
+.secIntro .linesHolder .line {
+  position: relative;
+  width: 1px;
+  height: 100%;
+  background-color: var(--light-grey01);
+  margin-left: 20%;
+}
+.secIntro .linesHolder .line:first-child,
+.secIntro .linesHolder .line:nth-child(3) {
+  top: 15%;
+  height: 85%;
+}
+.secIntro .linesHolder .line:nth-child(4) {
+  top: 12%;
+}
+.secIntro .linesHolder .line:nth-child(4):before {
+  position: absolute;
+  width: 2px;
+  height: 5vh;
+  background-color: var(--black);
+  content: "";
+}
+.secIntro .linesHolder .texture01 {
+  position: absolute;
+  top: 20%;
+  right: -10%;
+}
+.secIntro .linesHolder .texture02 {
+  position: absolute;
+  bottom: -3%;
+  right: 40%;
+}
+.secIntro .linesHolder .barRed01 {
+  position: absolute;
+  bottom: 2%;
+  left: 35%;
+  width: 20px;
+  height: 120px;
+  background-color: var(--black);
+}
+.secIntro .linesHolder .titleHolder {
+  position: absolute;
+  top: 40%;
+  left: 80%;
+  margin-left: -50px;
+  margin-top: 50px;
+  transform: rotate(90deg) !important;
+  width: 200px;
+  height: 75px;
+  font-size: 8.3vw;
+  font-weight: 400;
+  color: var(--black);
+  -webkit-filter: blur(3px);
+  -moz-filter: blur(3px);
+  -o-filter: blur(3px);
+  -ms-filter: blur(3px);
+  opacity: 0;
+  transition: 0.7s ease-out;
+}
+.secIntro .linesHolder .titleHolder p {
+  font-size: 1.3vw;
+  line-height: 1.5;
+}
+.secIntro .linesHolder .descHolder {
+  position: absolute;
+  bottom: 19%;
+  left: 55%;
+  margin-left: -50px;
+  width: 50%;
+  color: var(--black);
+}
+.secIntro .linesHolder .descHolder h4 {
+  margin-bottom: 15%;
+}
+.secIntro .linesHolder .descHolder h4 span {
+  font-size: 1.7vw;
+  font-weight: 700;
+  display: block;
+}
+.secIntro .headingHolder {
+  width: 52%;
+  margin: 0 0 0 var(--space12p);
+  padding-top: 20%;
+  padding-left: 0;
+}
+.secIntro .headingHolder h2 {
+  font-size: 1.9vw;
+  font-weight: 400;
+  margin-bottom: 2vh;
+}
+.secIntro .headingHolder .subHolder {
+  padding-top: 10%;
+}
+.secIntro .bgHolder {
+  position: relative;
+  left: 0;
+  width: 45%;
+  margin-bottom: var(--space100);
+}
+.secIntro .bgHolder .imgHolder {
+  width: 100%;
+  height: 45vh;
+  overflow: hidden;
+}
+#secAboutUs .secClients .clientListing li img,
+.secIntro .bgHolder .imgHolder img {
+  width: 100%;
+  height: auto;
+}
+.secIntro .bgHolder .texture01 {
+  position: absolute;
+  z-index: 2;
+  top: -10%;
+  right: 10%;
+}
+.secIntro .bgHolder .texture02 {
+  position: absolute;
+  z-index: 2;
+  bottom: -20px;
+  left: 18%;
+}
+.secIntro .contentHolder {
+  position: relative;
+  margin: 0 35% var(--space50) var(--space12p);
+}
+.secIntro .contentHolder .btnCTA,
+.secIntro .contentHolder h2,
+.secIntro .contentHolder h3,
+.secIntro .contentHolder p {
+  opacity: 0;
+  transition: 1s ease-out;
+}
+.secIntro .contentHolder h2 {
+  font-size: 1.9vw;
+}
+.secIntro .contentHolder p.appear {
+  transition-delay: 0.3s;
+}
+.defListingHolder li:after,
+.secAwards .secListing li:after {
+  height: 1px;
+  background-color: #282833;
+  transition: 0.8s ease-out 0.3s;
+  position: absolute;
+  display: block;
+  bottom: 0;
+  content: "";
+}
+.secIntro .contentHolder .btnCTA.appear {
+  transition-delay: 0.5s;
+}
+.secIntro .contentHolder .texture01 {
+  position: absolute;
+  bottom: -20%;
+  right: 20%;
+}
+.defListingHolder li {
+  position: relative;
+  top: 150px;
+  padding-bottom: 15%;
+  padding-top: 6%;
+  opacity: 0;
+  transition: 0.8s ease-out;
+}
+.defListingHolder li:after {
+  margin-bottom: -5%;
+  width: 1%;
+}
+.defListingHolder li.appear {
+  top: 0;
+  padding-bottom: 2%;
+  opacity: 1;
+}
+#secIndex .secServices .faqHolder li.appear:after,
+.defListingHolder li.appear:after,
+.secAwards .secListing li.appear:after {
+  width: 100%;
+  margin-bottom: 0;
+}
+.defListingHolder li a {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.defListingHolder li h3,
+.secAwards .secListing li h3 {
+  width: 35%;
+}
+.defListingHolder li h3 span {
+  margin-bottom: 5%;
+  letter-spacing: 4px;
+  display: block;
+}
+.defListingHolder li p {
+  width: 50%;
+  background: url(../images/ico-arrow-right-dark.png) top right no-repeat;
+  margin-right: 3%;
+  padding-right: 10%;
+}
+.defListingHolder li .imgHolder {
+  width: 100%;
+  margin-bottom: 45px;
+}
+.defListingHolder li .imgHolder img {
+  width: 100%;
+  display: block;
+  pointer-events: none;
+}
+.secAwards {
+  position: relative;
+  padding: 0 var(--space12p) var(--space125) var(--space12p);
+  overflow: hidden;
+}
+.secAwards .logoListing {
+  margin-top: 120px;
+  margin-bottom: 110px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.secAwards .logoListing li {
+  margin: 0 3% 35px 0;
+}
+.secAwards .secListing li {
+  position: relative;
+  top: 150px;
+  padding-bottom: 5px;
+  padding-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  opacity: 0;
+  transition: 0.8s ease-out;
+}
+.secAwards .secListing li:after {
+  margin-bottom: -50px;
+  width: 1%;
+}
+#secIndex .secServices .faqHolder li.appear,
+.secAwards .secListing li.appear {
+  top: 0;
+  opacity: 1;
+}
+.secAwards .secListing li h3 span {
+  font-weight: 200;
+  display: block;
+}
+.secAwards .secListing li h4 {
+  width: 15%;
+  font-weight: 300;
+  font-size: 17px;
+  letter-spacing: 4px;
+  display: block;
+}
+.secAwards .secListing li p {
+  width: 30%;
+  margin-right: 25px;
+  padding-right: 100px;
+}
+#secIndex .cursorCircle:after {
+  border: 1px solid #fff;
+}
+#secIndex .cursorCircle.hvLink:after {
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 1px solid transparent;
+}
+#secIndex .logoHolder img {
+  filter: brightness(1000%);
+}
+#secIndex .secIntro {
+  position: relative;
+  z-index: 2;
+  background-color: var(--black);
+  padding-bottom: 5%;
+}
+#secIndex .secIntro .videoHolder:before {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 45%;
+  background: url(../images/bg-header-dark.png) top left repeat-x;
+  content: "";
+}
+#secIndex .secIntro .linesHolder .barRed01,
+#secIndex .secIntro .linesHolder .line:nth-child(4):before,
+#secIndex .secServices {
+  background-color: var(--red);
+}
+#secIndex .secIntro h1 strong {
+  color: var(--red);
+}
+#secIndex .secIntro .linesHolder {
+  position: absolute;
+  z-index: 22;
+  height: 115%;
+}
+#secIndex .secIntro .linesHolder .titleHolder {
+  top: 45%;
+  color: var(--white);
+}
+#secIndex .secIntro .headingHolder {
+  width: 48%;
+  padding-top: 24%;
+}
+#secIndex .secIntro .contentHolder {
+  margin: 0 40% var(--space50) var(--space12p);
+}
+#secIndex .secServices {
+  position: relative;
+  z-index: 1;
+  padding-top: 2%;
+}
+#secIndex .secServices .contentHolder {
+  margin: 0 0 var(--space125) var(--space12p);
+  opacity: 0;
+  transition: opacity 3s;
+}
+#secIndex .secServices h2 {
+  margin-top: 100px;
+  width: 50%;
+}
+#secIndex .secServices .secListing {
+  width: 100%;
+  position: relative;
+  margin-bottom: 5%;
+}
+#secAboutUs .secClients .clientListing:active,
+#secAboutUs .secClients .flickity-viewport:active,
+#secIndex .secServices .flickity-viewport:active,
+#secIndex .secServices .secListing:active {
+  border: none;
+  -webkit-appearance: none;
+  outline: 0;
+}
+#secIndex .secServices .secListing li {
+  width: 38%;
+  margin-right: 35px;
+  margin-top: 50px;
+  counter-increment: gallery-cell;
+  display: block;
+  content: counter(gallery-cell);
+  cursor: pointer;
+  opacity: 0;
+  transition: 0.8s ease-out;
+}
+#secIndex .secServices .secListing li:nth-child(2) {
+  transition-delay: 0.1s;
+}
+#secIndex .secServices .secListing li:nth-child(3) {
+  transition-delay: 0.2s;
+}
+#secIndex .secServices .secListing li a {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+#secIndex .secServices .secListing li .imgHolder {
+  position: relative;
+  width: 100%;
+  margin-bottom: 12%;
+  overflow: hidden;
+}
+#secIndex .secServices .secListing li .imgHolder:after {
+  content: "";
+  display: block;
+  padding-bottom: 80%;
+}
+#secIndex .secServices .secListing li .imgHolder img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  pointer-events: none;
+  transition: 0.2s ease-out;
+}
+#secIndex .secServices .secListing li a:hover .imgHolder img {
+  width: 110%;
+  height: 110%;
+}
+#secIndex .secServices .secListing .flickity-page-dots {
+  position: relative;
+  margin: -30px 0 0;
+  padding: 0;
+  display: flex;
+}
+#secIndex .secServices .secListing .flickity-page-dots li {
+  width: 9px;
+  height: 9px;
+  background-color: var(--black);
+  margin: 0 3% 0 0;
+  padding: 0;
+  opacity: 0.3;
+  border-radius: 50%;
+  overflow: hidden;
+}
+#secIndex .secServices .secListing .flickity-page-dots li.is-selected {
+  background-color: var(--black);
+  opacity: 1;
+}
+#secIndex .secServices .faqHolder {
+  padding-right: 21%;
+  padding-bottom: 10%;
+}
+#secIndex .secServices .faqHolder p {
+  display: none;
+  margin-bottom: 10px;
+}
+#secIndex .secServices .faqHolder h3 {
+  margin-bottom: 5px;
+  background: url(../images/ico-arrow-bottom-dark.png) right center no-repeat;
+}
+#secIndex .secServices .faqHolder li {
+  position: relative;
+  padding-bottom: 10px;
+  padding-top: 20px;
+  top: 150px;
+  opacity: 0;
+  cursor: pointer;
+  transition: 0.8s ease-out;
+}
+#secIndex .secServices .faqHolder li:after {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: -50px;
+  width: 1%;
+  height: 1px;
+  content: "";
+  background-color: #282833;
+  display: block;
+  opacity: 0.3;
+  transition: 0.8s ease-out 0.5s;
+}
+#secIndex .secPortfolio {
+  position: relative;
+  z-index: 3;
+  background-color: var(--white);
+  padding: 0;
+}
+#secIndex .secPortfolio .linesHolder {
+  position: absolute;
+  z-index: 2;
+  width: 35%;
+  height: 90vh;
+  pointer-events: none;
+  top: -13%;
+  right: var(--space12p);
+  display: flex;
+  justify-content: right;
+}
+#secIndex .secPortfolio .linesHolder .line:first-child,
+#secIndex .secPortfolio .linesHolder .line:nth-child(3) {
+  top: 40%;
+  height: 60%;
+}
+#secIndex .secPortfolio .linesHolder .line:nth-child(4) {
+  top: 35%;
+  height: 120%;
+}
+#secIndex .secPortfolio .linesHolder .texture01 {
+  position: absolute;
+  top: 15%;
+  right: 80%;
+}
+#secIndex .secPortfolio .secListing li:nth-child(2) {
+  padding-top: 20%;
+}
+#secIndex .secPortfolio .secListing li:first-child .imgHolder {
+  background-color: #506f6a;
+}
+#secIndex .secPortfolio .secListing li:nth-child(2) .imgHolder {
+  background-color: #c7d7f2;
+}
+#secIndex .secPortfolio .secListing li:nth-child(3) .imgHolder {
+  background-color: #ed997d;
+}
+#secIndex .secPortfolio .secListing li:nth-child(4) .imgHolder {
+  background-color: #7c202e;
+}
+#secIndex .secPortfolio .secListing li .imgHolder img {
+  transition: 0.3s;
+}
+#secIndex .secPortfolio .secListing li:hover .imgHolder img {
+  width: 110%;
+  margin-left: -5%;
+  transition: 0.3s;
+}
+#secServices li h3 span {
+  margin-bottom: 15px;
+  color: #7070a1;
+  font-weight: 300;
+  font-size: 17px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: block;
+}
+#secServices .secIntro {
+  background-color: var(--red);
+  padding-bottom: 20%;
+}
+#secServices .secIntro h1 {
+  font-size: 4vw;
+}
+#secServices .secIntro .linesHolder .line {
+  position: relative;
+  width: 1px;
+  height: 80%;
+  background-color: var(--light-grey01);
+  margin-left: 20%;
+}
+#secServices .secIntro .linesHolder .line:first-child,
+#secServices .secIntro .linesHolder .line:nth-child(3) {
+  top: 11%;
+  height: 60%;
+}
+#secServices .secIntro .linesHolder .line:nth-child(2) {
+  height: 71%;
+}
+#secServices .secIntro .linesHolder .line:nth-child(4) {
+  top: 8%;
+}
+#secServices .secIntro .linesHolder .texture02 {
+  bottom: 13%;
+}
+#secServices .secIntro .linesHolder .barRed01 {
+  bottom: 30%;
+}
+#secServices .secIntro .headingHolder {
+  margin: 0 var(--space12p) 8% var(--space12p);
+}
+#secServices .secIntro .bgHolder .texture01 {
+  top: -15%;
+  right: -25%;
+}
+#secServices .secDivider {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 90vh;
+  margin-top: -20%;
+}
+#secServices .secDivider .linesHolder {
+  position: absolute;
+  width: 35%;
+  height: 100%;
+  pointer-events: none;
+  top: -15%;
+  left: var(--space12p);
+  display: flex;
+}
+#secServices .secDivider .linesHolder .line {
+  position: relative;
+  top: 8%;
+  width: 1px;
+  height: 80%;
+  background-color: var(--light-grey01);
+  margin-right: 20%;
+}
+#secServices .secDivider .linesHolder .line:nth-child(4) {
+  top: 0;
+  height: 100%;
+}
+#secServices .secDivider .linesHolder .texture01 {
+  position: absolute;
+  bottom: 50%;
+  left: 18%;
+}
+#secServices .secDivider .linesHolder .texture02 {
+  position: absolute;
+  bottom: 0;
+  left: 5%;
+}
+#secServices .secDivider .linesHolder .barRed01 {
+  position: absolute;
+  top: -5%;
+  left: -35%;
+  width: 32px;
+  height: 278px;
+  background-color: var(--red);
+}
+#secServices .secDivider .bgHolder {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 66.8%;
+}
+#secServices .secDivider .bgHolder .texture01 {
+  position: absolute;
+  z-index: 2;
+  top: -10%;
+  right: 30%;
+}
+#secServices .secDivider .bgHolder .barRed01 {
+  position: absolute;
+  z-index: 2;
+  bottom: -35%;
+  right: 35%;
+  width: 1.5%;
+  height: 50%;
+  background-color: var(--black);
+}
+#secServices .secDivider .bgHolder .barRed02 {
+  position: absolute;
+  z-index: 2;
+  bottom: -25%;
+  right: 31%;
+  width: 3%;
+  height: 50%;
+  background-color: var(--black);
+}
+#secServices .secDivider .bgHolder .imgHolder {
+  width: 100%;
+  height: 70vh;
+  overflow: hidden;
+}
+#secServices .secDivider .bgHolder .imgHolder img {
+  width: 110%;
+  height: auto;
+}
+#secServices .secServiceListing {
+  margin: 0 0 var(--space125) var(--space12p);
+}
+#secServices .secServiceListing .secListing {
+  position: relative;
+  width: 150%;
+  padding-top: 3%;
+  display: flex;
+}
+#secServices .secServiceListing .secListing li {
+  width: 60%;
+  margin-right: 3%;
+  white-space: normal;
+}
+#secServices .secServiceListing .secListing li h3 span {
+  margin-bottom: 0;
+}
+#secServices .secServiceListing .secListing li .imgHolder {
+  position: relative;
+  background-color: var(--black);
+  margin-bottom: 10%;
+  overflow: hidden;
+}
+#secServices .secServiceListing .secListing li .imgHolder:after {
+  content: "";
+  display: block;
+  padding-bottom: 75%;
+}
+#secServices .secServiceListing .secListing li .imgHolder img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 102%;
+  height: 102%;
+  object-fit: cover;
+  transition: 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+#secServices .secServiceListing .spaceHolder {
+  height: 150vh;
+}
+#secPortDetails .secIntro {
+  z-index: 2;
+  background-color: var(--white);
+  padding-bottom: 7%;
+}
+#secAboutUs .secIntro .headingHolder,
+#secPortDetails .secIntro .headingHolder {
+  margin: 0 var(--space12p) 7% var(--space12p);
+}
+#secAboutUs .secIntro .bgHolder,
+#secPortDetails .secIntro .bgHolder {
+  width: 66.8%;
+}
+#secPortDetails .secIntro .bgHolder .imgHolder {
+  height: 60vh;
+}
+#secPortDetails .secImages {
+  position: relative;
+  z-index: 1;
+  padding: 0 var(--space12p) 20vh var(--space12p);
+}
+#secDefaultDetails .secDefContent img,
+#secPortDetails .secImages img {
+  width: 100%;
+  height: auto;
+  display: block;
+  pointer-events: none;
+}
+#secPortDetails .secNextWork {
+  width: 100%;
+  margin-bottom: -1%;
+}
+#secPortDetails .secNextWork a {
+  width: 100%;
+  display: block;
+}
+#secPortDetails .secNextWork .imgHolder {
+  position: relative;
+  background-color: var(--dark-blue);
+  overflow: hidden;
+}
+#secPortDetails .secNextWork .imgHolder:after {
+  content: "";
+  display: block;
+  padding-bottom: 55%;
+}
+#secPortDetails .secNextWork .imgHolder img {
+  position: absolute;
+  width: 102%;
+  height: 102%;
+  object-fit: cover;
+  opacity: 0.6;
+}
+#secPortDetails .secNextWork h2 {
+  position: absolute;
+  top: 50%;
+  left: var(--space12p);
+  right: var(--space12p);
+  width: 50%;
+  font-size: 4.5vw;
+  color: var(--white);
+}
+#secAboutUs .secIntro {
+  z-index: 2;
+  margin-bottom: var(--space100);
+}
+#secAboutUs .secIntro .bgHolder .imgHolder {
+  height: 55vh;
+}
+#secAboutUs .secImg {
+  position: relative;
+  z-index: 1;
+  margin-bottom: var(--space100);
+}
+#secAboutUs .secImg .imgHolder {
+  position: relative;
+  overflow: hidden;
+}
+#secAboutUs .secImg .imgHolder:after {
+  content: "";
+  display: block;
+  padding-bottom: 60%;
+}
+#secAboutUs .secClients {
+  margin: 0 var(--space12p) var(--space100) var(--space12p);
+}
+#secAboutUs .secClients .clientListing {
+  width: 100%;
+  position: relative;
+  align-items: center;
+}
+#secAboutUs .secClients .clientListing li {
+  width: 15%;
+  margin-right: 5%;
+  display: block;
+  cursor: pointer;
+  transition: 0.8s ease-out;
+}
+#secAboutUs .secClients .clientListing li.x4 {
+  width: 4%;
+}
+#secAboutUs .secClients .clientListing li.x10 {
+  width: 10%;
+}
+#secAboutUs .secClients .clientListing li.x20 {
+  width: 20%;
+}
+#secDefaultDetails .secHeading,
+#secDefaultListing .secHeading {
+  position: relative;
+  padding: 18% 20% 0;
+}
+#secDefaultDetails .secDefContent,
+#secDefaultListing .secDefContent {
+  position: relative;
+  padding: 0 20% 100px;
+}
+#secDefaultDetails .secHeading h1 {
+  margin-bottom: 7%;
+}
+#secDefaultDetails .secDefContent .bannerHolder {
+  position: relative;
+  width: 100%;
+  margin-bottom: 3%;
+}
+#secDefaultDetails .secDefContent ul {
+  display: block;
+  list-style: disc;
+  margin: 1em 0;
+  padding: 0 0 40px 40px;
+}
+#secDefaultDetails .secDefContent ol {
+  list-style-type: decimal;
+}
+#secDefaultDetails .secDefContent li {
+  list-style: disc;
+  display: list-item;
+}
+#secContactUs .secIntro .linesHolder {
+  top: 0;
+  right: auto;
+  left: var(--space12p);
+  justify-content: left;
+}
+#secContactUs .secIntro .linesHolder .line {
+  height: 80%;
+  margin-left: 0;
+  margin-right: 20%;
+}
+#secContactUs .secIntro .linesHolder .line:first-child,
+#secContactUs .secIntro .linesHolder .line:nth-child(3) {
+  height: 65%;
+}
+#secContactUs .secIntro .linesHolder .line:nth-child(4) {
+  height: 80%;
+}
+#secContactUs .secIntro .linesHolder .texture01 {
+  position: absolute;
+  top: 50%;
+  right: auto;
+  left: 0;
+}
+#secContactUs .secIntro .linesHolder .barRed01 {
+  bottom: 50%;
+  left: 56.5%;
+}
+#secContactUs .secIntro .linesHolder .descHolder {
+  bottom: 25%;
+  left: 0;
+  margin-left: 0;
+  width: 70%;
+}
+#secContactUs .secIntro .headingHolder {
+  position: absolute;
+  width: 40%;
+  margin: 0 0 5% var(--space12p);
+  padding-top: 25%;
+}
+#secContactUs .secIntro .bgHolder {
+  position: relative;
+  top: auto;
+  left: auto;
+  width: auto;
+  margin: 0 var(--space12p) var(--space50) 55%;
+  padding-top: 20%;
+}
+#secContactUs .secIntro .bgHolder .imgHolder {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+#secContactUs .secIntro .bgHolder .imgHolder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#secContactUs .secIntro .bgHolder .texture01 {
+  top: auto;
+  bottom: 10%;
+  right: auto;
+  left: -40%;
+}
+#secContactUs .secIntro .bgHolder .texture02 {
+  bottom: auto;
+  left: auto;
+  top: 25%;
+  right: -10%;
+}
+#secContactUs .secIntro .contentHolder {
+  position: relative;
+  margin: 0 var(--space12p) var(--space50) 40%;
+}
+@media only screen and (max-width: 1299px) {
+  h2,
+  h3 {
+    margin-bottom: 5%;
+  }
+  .tabNavi li,
+  header .secServNavi li,
+  header .secTopMenu li {
+    font-size: 1vw;
+  }
+  :root {
+    --white-space01: 0 3%;
+    --white-space02: 3% 3%;
+    --white-space03: 0 8%;
+    --space45: 3%;
+    --space12p: 8%;
+  }
+  div,
+  fieldset,
+  footer,
+  form,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  header,
+  input,
+  label,
+  p,
+  section,
+  select,
+  select option,
+  td,
+  textarea,
+  th,
+  tr {
+    font-size: 1.25vw;
+  }
+  h1 {
+    margin-bottom: 70px;
+    font-size: 4.5vw;
+  }
+  h2 {
+    font-size: 2.3vw;
+    line-height: 1.35;
+  }
+  h3 {
+    font-size: 1.7vw;
+    line-height: 1.5;
+  }
+  .cursorCircle,
+  .theIndicator {
+    display: none;
+  }
+  header {
+    height: 145px;
+  }
+  header .logoHolder {
+    width: 11vw;
+  }
+  #btnMenu {
+    top: -4px;
+  }
+  .tabNavi li {
+    letter-spacing: 0.2vw;
+  }
+  .secPortfolio .secListing li {
+    width: 47%;
+  }
+  .secIntro .linesHolder .barRed01 {
+    left: 33%;
+  }
+  .secIntro .linesHolder .titleHolder {
+    left: 75%;
+  }
+  .secIntro .linesHolder .descHolder {
+    bottom: 17%;
+  }
+  .secIntro .headingHolder {
+    margin: 0 var(--space12p) 10% var(--space12p);
+    padding-top: 20%;
+  }
+  #secIndex .secIntro .headingHolder,
+  .secIntro .bgHolder {
+    width: 60%;
+  }
+  .secIntro .bgHolder .texture02 {
+    bottom: -10px;
+  }
+  .secAwards .secListing li {
+    padding-top: 30px;
+  }
+  .secAwards .secListing li h3 {
+    margin-bottom: 18px;
+  }
+  .secAwards .secListing li p {
+    width: 35%;
+    margin-right: 0;
+    padding-right: 0;
+  }
+  #secIndex .secIntro .linesHolder .titleHolder {
+    top: 65%;
+  }
+  #secIndex .secIntro .contentHolder {
+    margin: 0 35% var(--space50) var(--space12p);
+  }
+  #secIndex .secServices .linesHolder .titleHolder {
+    font-size: 6rem;
+  }
+  #secIndex .secServices .secListing li {
+    margin-right: 25px;
+  }
+  #secIndex .secServices .faqHolder {
+    padding-right: 12%;
+  }
+  #secServices .secIntro .headingHolder {
+    margin: 0 var(--space12p) 10% var(--space12p);
+  }
+  #secServices .secDivider .linesHolder .texture01 {
+    left: 12%;
+  }
+  #secServices .secDivider .bgHolder {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 70.5%;
+  }
+  #secServices .secServiceListing {
+    margin: 0 var(--space12p) var(--space125) var(--space12p);
+  }
+  #secServices .secServiceListing h2 {
+    margin-bottom: 2%;
+  }
+  #secServices .secServiceListing .secListing {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  #secServices .secServiceListing .secListing li {
+    width: 48%;
+    margin-right: 4%;
+    white-space: normal;
+  }
+  #secServices .secServiceListing .secListing li:nth-child(2n) {
+    margin-right: 0;
+  }
+  #secServices .secServiceListing .spaceHolder {
+    height: auto;
+  }
+  #secAboutUs .secIntro .bgHolder,
+  #secPortDetails .secIntro .bgHolder {
+    width: 70.8%;
+  }
+  #secPortDetails .secIntro .linesHolder .titleHolder {
+    width: 185px;
+  }
+  #secPortDetails .secIntro .contentHolder .texture01 {
+    bottom: -30%;
+  }
+  #secPortDetails .secNextWork {
+    position: relative;
+  }
+  #secDefaultDetails .secHeading,
+  #secDefaultListing .secHeading {
+    padding: 18% var(--space12p) 0 var(--space12p);
+  }
+  #secDefaultDetails .secHeading .contentHolder,
+  #secDefaultListing .secHeading .contentHolder {
+    width: 75%;
+  }
+  #secDefaultListing .secHeading h1 {
+    margin-bottom: 35px;
+  }
+  #secDefaultDetails .secDefContent,
+  #secDefaultListing .secDefContent {
+    padding: 0 var(--space12p) 100px var(--space12p);
+  }
+  #secDefaultDetails .secHeading h1 {
+    margin-bottom: 7%;
+  }
+  #secContactUs .secIntro .linesHolder .descHolder {
+    bottom: 25%;
+    width: 80%;
+  }
+  #secContactUs .secIntro .headingHolder {
+    width: 38%;
+    padding-top: 25%;
+  }
+  #secContactUs .secIntro .bgHolder {
+    margin: 0 var(--space12p) var(--space50) 48%;
+  }
+  #secContactUs .secIntro .bgHolder .imgHolder {
+    height: 90vh;
+  }
+  #secContactUs .secIntro .bgHolder .texture01 {
+    left: -30%;
+  }
+}
+@media only screen and (max-width: 969px) {
+  .defListingHolder li h3 span,
+  h1 span,
+  h2 span {
+    margin-bottom: 10px;
+  }
+  #secServices .secServiceListing h2,
+  h2 {
+    margin-bottom: 30px;
+  }
+  #secPortDetails .secNextWork,
+  .btnCTA a {
+    position: relative;
+  }
+  :root {
+    --white-space01: 0 5%;
+    --white-space02: 5% 5%;
+    --white-space03: 0 5%;
+    --space100: 100px;
+    --space125: 125px;
+    --space50: 50px;
+    --space45: 5%;
+    --space30: 30px;
+    --space12p: 5%;
+  }
+  div,
+  fieldset,
+  footer,
+  form,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  header,
+  input,
+  label,
+  p,
+  section,
+  select,
+  select option,
+  td,
+  textarea,
+  th,
+  tr {
+    font-size: 16px;
+  }
+  footer .secCTA h2,
+  h1 {
+    font-size: 2.5rem;
+    line-height: 1.5;
+  }
+  h1 span,
+  h2 span {
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+  }
+  h2 {
+    font-size: 1.85rem;
+  }
+  h3 {
+    margin-bottom: 20px;
+    font-size: 1.35rem;
+  }
+  h3 span {
+    margin-bottom: 15px;
+    font-size: 0.85rem;
+    letter-spacing: 1.5px;
+  }
+  h4 {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+  h5 {
+    font-size: 0.85rem;
+    line-height: 1.2;
+  }
+  p {
+    font-size: 1rem;
+    margin-bottom: 35px;
+  }
+  .headingHolder {
+    padding-left: 0;
+  }
+  #preloader .txtLoader01 p {
+    font-size: 18px;
+  }
+  #preloader .txtLoader02 p {
+    font-size: 120px;
+  }
+  .txt2x2 {
+    width: 30px;
+  }
+  .txt5x5 {
+    width: 80px;
+  }
+  .txt6x4 {
+    width: 100px;
+  }
+  .txt10x10 {
+    width: 150px;
+  }
+  .btnCTA a {
+    letter-spacing: 0.5vw;
+    text-transform: uppercase;
+  }
+  .btnCTA a:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--black);
+    content: "";
+  }
+  header {
+    height: 135px;
+  }
+  header .widthWrapper {
+    position: relative;
+    margin: var(--white-space02);
+  }
+  header .logoHolder {
+    width: 120px;
+  }
+  #secContactUs .secIntro .bgHolder .texture01,
+  #secContactUs .secIntro .linesHolder,
+  #secIndex .secPortfolio .bgHolder,
+  #secIndex .secPortfolio .linesHolder,
+  #secIndex .secServices .linesHolder,
+  #secPortDetails .secIntro .contentHolder .texture01,
+  #secServices .secDivider .bgHolder .barRed01,
+  #secServices .secDivider .bgHolder .barRed02,
+  #secServices .secDivider .linesHolder,
+  .secIntro .contentHolder .texture01,
+  .secIntro .linesHolder .barRed01,
+  .secIntro .linesHolder .descHolder,
+  .secIntro .linesHolder .line:nth-child(4),
+  .secIntro .linesHolder .texture01,
+  .secIntro .linesHolder .texture02,
+  .secIntro .linesHolder .titleHolder,
+  .tabNavi,
+  .theIndicator,
+  aside.fullNavi .borderHolder,
+  aside.fullNavi .secCopyright,
+  aside.fullNavi .secSocial,
+  header .secServNavi {
+    display: none;
+  }
+  header .secTopMenu {
+    padding-top: 20px;
+  }
+  header .secTopMenu ul {
+    margin-top: 5px;
+    display: none;
+  }
+  header .secTopMenu li {
+    font-size: 13px;
+  }
+  footer {
+    padding: var(--space100) var(--space12p);
+  }
+  .defListingHolder li a,
+  footer .secFooterInfo {
+    display: block;
+  }
+  footer .secFooterInfo .contentHolder {
+    width: 100%;
+    margin-bottom: var(--space50);
+  }
+  .secPortfolio .contentHolder h2,
+  footer .secCopyright .copyHolder,
+  footer .secFooterInfo .formHolder {
+    width: 100%;
+  }
+  footer .secPartners li img {
+    max-height: 35px;
+  }
+  footer .secCopyright {
+    padding-top: 50px;
+    display: block;
+  }
+  footer .secCopyright .socialHolder {
+    width: 100%;
+    margin-bottom: var(--space30);
+  }
+  footer .secCopyright .socialHolder ul {
+    justify-content: left;
+  }
+  footer .secCopyright .socialHolder li {
+    padding: 0 20px 0 0;
+  }
+  aside.fullNavi .btnClose {
+    top: 10%;
+    right: 5%;
+  }
+  aside.fullNavi .btnClose.naviSlideIn {
+    top: 5%;
+  }
+  aside.fullNavi .secContent {
+    width: 80%;
+    height: 100%;
+    overflow-y: scroll;
+  }
+  aside.fullNavi .secMainNavi {
+    width: auto;
+    height: auto;
+    padding-top: 120px;
+    float: none;
+  }
+  aside.fullNavi .secMainNavi li {
+    margin: 0 0 0 -20px;
+    font-size: 2.35em;
+  }
+  aside.fullNavi .secContD {
+    width: auto;
+    padding-top: 30px;
+    float: none;
+  }
+  aside.fullNavi .secContD li {
+    margin: 0 0 5px;
+    font-size: 1em;
+  }
+  aside.fullNavi .secContD li a {
+    font-size: 1em;
+  }
+  .secPortfolio .secListing li {
+    width: 48%;
+    margin-bottom: 5%;
+  }
+  #secIndex .secPortfolio .secListing li:nth-child(2),
+  .secPortfolio .secListing li:nth-child(2) {
+    padding-top: 0;
+  }
+  .secIntro h1 {
+    margin-bottom: 20px;
+  }
+  .secIntro .linesHolder {
+    z-index: 2;
+    width: 70%;
+    height: 50%;
+  }
+  .secIntro .linesHolder .line:first-child,
+  .secIntro .linesHolder .line:nth-child(3) {
+    top: 15%;
+    height: 85%;
+  }
+  .secIntro .linesHolder .line:nth-child(3):before {
+    position: absolute;
+    width: 2px;
+    height: 5vh;
+    background-color: var(--black);
+    content: "";
+  }
+  .secIntro .headingHolder {
+    width: auto;
+    padding-top: 300px;
+    margin-bottom: var(--space100);
+  }
+  .secIntro .headingHolder h2 {
+    font-size: 1.5rem;
+  }
+  .secIntro .headingHolder p {
+    width: 100%;
+    font-size: 1rem;
+  }
+  .secIntro .bgHolder {
+    left: auto;
+    width: auto;
+    margin: 0 var(--space12p) var(--space100) var(--space12p);
+  }
+  .secIntro .bgHolder .imgHolder {
+    height: 350px;
+  }
+  .secIntro .bgHolder .imgHolder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  #secServices .secIntro .bgHolder .texture01,
+  .secIntro .bgHolder .texture01 {
+    top: -10%;
+    right: 10%;
+  }
+  .secIntro .bgHolder .texture02 {
+    bottom: -5%;
+    left: 10%;
+  }
+  #secContactUs .secIntro .contentHolder,
+  #secIndex .secIntro .contentHolder,
+  .secIntro .contentHolder {
+    margin: 0 var(--space12p) var(--space50) var(--space12p);
+  }
+  .defListingHolder li h3 {
+    width: 100%;
+    font-weight: 400;
+  }
+  .defListingHolder li p {
+    width: 100%;
+    background: 0 0;
+    margin-right: 0;
+    padding-right: 0;
+  }
+  .secAwards .secListing li {
+    padding-bottom: 0;
+    padding-top: 30px;
+  }
+  .secAwards .secListing li h4 {
+    width: 20%;
+  }
+  .secAwards .secListing li p {
+    width: 35%;
+    margin-right: 0;
+    padding-right: 0;
+  }
+  #secIndex .secIntro .linesHolder {
+    height: 100%;
+  }
+  #secIndex .secIntro .linesHolder .line:nth-child(3):before {
+    background-color: var(--red);
+  }
+  #secIndex .secIntro .headingHolder {
+    width: auto;
+    margin: 0 35% 80px var(--space12p);
+    padding-top: 300px;
+  }
+  #secIndex .secServices .contentHolder {
+    margin: 0 0 var(--space125) var(--space12p);
+  }
+  #secIndex .secServices h2 {
+    margin-top: 100px;
+    width: 95%;
+  }
+  #secIndex .secServices .secListing {
+    margin-bottom: 80px;
+  }
+  #secIndex .secServices .secListing li {
+    width: 70%;
+    margin-right: 35px;
+    margin-top: 50px;
+  }
+  #secIndex .secServices .secListing .flickity-page-dots {
+    margin: -10px 0 0;
+  }
+  #secIndex .secServices .faqHolder {
+    padding-right: var(--space12p);
+  }
+  #secIndex .secServices .faqHolder h3 {
+    background: 0 0;
+  }
+  #secIndex .secPortfolio {
+    margin-bottom: -3%;
+    padding: 0;
+  }
+  #secIndex .secPortfolio .contentHolder {
+    border-bottom: var(--border-light-grey02);
+  }
+  #secServices .secIntro {
+    padding-bottom: 30%;
+  }
+  #secServices .secIntro h1 {
+    font-size: 2.5rem;
+  }
+  #secServices .secIntro .linesHolder {
+    height: 110%;
+  }
+  #secServices .secIntro .headingHolder {
+    margin: 0 40% 100px var(--space12p);
+  }
+  #secServices .secDivider {
+    height: auto;
+    margin-bottom: var(--space125);
+  }
+  #secServices .secDivider .bgHolder {
+    position: static;
+    width: 100%;
+  }
+  #secServices .secDivider .bgHolder .texture01 {
+    top: -5%;
+    right: 10%;
+  }
+  #secPortDetails .secIntro .bgHolder .imgHolder,
+  #secServices .secDivider .bgHolder .imgHolder {
+    height: auto;
+  }
+  #secServices .secServiceListing {
+    margin: 0 var(--space12p) var(--space125) var(--space12p);
+  }
+  #secServices .secServiceListing .secListing {
+    width: auto;
+    padding-top: 0;
+    flex-wrap: nowrap;
+    display: block;
+  }
+  #secServices .secServiceListing .secListing li {
+    width: 100%;
+    margin-right: 0;
+  }
+  #secServices .secServiceListing .spaceHolder {
+    height: 0;
+  }
+  #secPortDetails .secIntro {
+    padding-bottom: 100px;
+  }
+  #secPortDetails .secIntro .headingHolder {
+    margin: 0 var(--space12p) var(--space100) var(--space12p);
+  }
+  #secAboutUs .secIntro .bgHolder,
+  #secAboutUs .secIntro .headingHolder,
+  #secPortDetails .secIntro .bgHolder {
+    width: auto;
+  }
+  #secPortDetails .secNextWork a {
+    width: 100%;
+    display: block;
+  }
+  #secPortDetails .secNextWork h2 {
+    font-size: 1.7rem;
+  }
+  #secAboutUs .secIntro .bgHolder .imgHolder {
+    height: 450px;
+  }
+  #secAboutUs .secClients .clientListing li {
+    width: 25%;
+  }
+  #secAboutUs .secClients .clientListing li.x4 {
+    width: 5%;
+  }
+  #secAboutUs .secClients .clientListing li.x10 {
+    width: 15%;
+  }
+  #secDefaultListing .secHeading {
+    padding: 300px 5% 50px;
+  }
+  #secDefaultDetails .secDefContent,
+  #secDefaultListing .secDefContent {
+    padding: 0 5% 100px;
+  }
+  #secDefaultDetails .secHeading {
+    padding: 300px 5% 20px;
+  }
+  #secDefaultDetails .secHeading h1 {
+    margin-bottom: 0;
+  }
+  #secDefaultDetails .secDefContent .bannerHolder {
+    margin-bottom: 50px;
+  }
+  #secContactUs .secIntro .headingHolder {
+    position: static;
+    width: auto;
+    margin: 300px var(--space12p) var(--space50) var(--space12p);
+    padding-top: 0;
+  }
+  #secContactUs .secIntro .bgHolder {
+    position: static;
+    top: auto;
+    left: auto;
+    width: auto;
+    margin: 0 var(--space12p) var(--space50) var(--space12p);
+    padding-top: 0;
+  }
+  #secContactUs .secIntro .bgHolder .imgHolder {
+    height: 500px;
+  }
+  #secContactUs .secIntro .bgHolder .texture02 {
+    bottom: auto;
+    left: auto;
+    top: 10%;
+    right: 10%;
+  }
+}
+@media only screen and (max-width: 560px) {
+  .secIntro .headingHolder {
+    padding-top: 200px;
+    margin-bottom: var(--space50);
+  }
+  #secIndex .secIntro .headingHolder {
+    padding-top: 200px;
+  }
+  #secServices .secIntro .headingHolder {
+    margin: 0 var(--space12p) 50px var(--space12p);
+  }
+  #secDefaultListing .secHeading {
+    padding: 200px 5% 0;
+  }
+  #secDefaultDetails .secHeading {
+    padding: 200px 5% 20px;
+  }
+  #secContactUs .secIntro .headingHolder {
+    margin: 200px var(--space12p) var(--space50) var(--space12p);
+  }
+}
+@media only screen and (max-width: 500px) {
+  #secServices .secIntro h1,
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.65rem;
+    line-height: 1.5;
+  }
+  h3 {
+    font-size: 1.35rem;
+  }
+  #preloader .txtLoader01 p {
+    font-size: 16px;
+  }
+  #preloader .txtLoader02 p {
+    font-size: 70px;
+  }
+  header .logoHolder {
+    width: 90px;
+  }
+  footer {
+    background-size: cover;
+  }
+  #secPortDetails .secNextWork h2,
+  footer .secCTA h2 {
+    font-size: 1.5rem;
+  }
+  footer .secFooterInfo .servHolder {
+    display: block;
+  }
+  footer .secFooterInfo .servHolder li {
+    margin-right: 0;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: var(--border-light-grey02);
+  }
+  footer .secFooterInfo .servHolder li:last-child {
+    margin-right: 0;
+  }
+  aside.fullNavi .secContD li:first-child,
+  footer .secFooterInfo .servHolder li:after,
+  footer .secPartners p {
+    display: none;
+  }
+  footer .secPartners li {
+    margin-right: 20px;
+  }
+  aside.fullNavi .secMainNavi {
+    padding-top: 120px;
+  }
+  aside.fullNavi .secMainNavi li {
+    font-size: 1.75em;
+  }
+  .secPortfolio .secListing li {
+    width: 100%;
+    float: none;
+    margin-bottom: 5%;
+  }
+  .secPortfolio .secListing li:nth-child(2n) {
+    float: none;
+  }
+  .secPortfolio .secListing li:nth-child(2) {
+    padding-top: 0;
+  }
+  .secIntro .headingHolder {
+    padding-top: 300px;
+  }
+  .secIntro .headingHolder h2 {
+    font-size: 1.1rem;
+  }
+  .secIntro .bgHolder .imgHolder {
+    height: 250px;
+  }
+  .secAwards .secListing li {
+    top: 150px;
+    padding-bottom: 5px;
+    padding-top: 30px;
+    display: block;
+  }
+  .secAwards .secListing li h3 {
+    width: 100%;
+    font-weight: 700;
+    line-height: 1.35;
+  }
+  .secAwards .secListing li h4 {
+    width: 100%;
+    font-size: 13px;
+    line-height: 1.35;
+  }
+  .secAwards .secListing li p {
+    width: 100%;
+    font-weight: 400;
+  }
+  .defListingHolder li {
+    padding-top: 10%;
+  }
+  #secIndex .secIntro .headingHolder {
+    margin: 0 var(--space12p) 80px var(--space12p);
+    padding-top: 300px;
+  }
+  #secIndex .secServices .secListing li {
+    width: 80%;
+    margin-right: 25px;
+  }
+  #secPortDetails .secNextWork .imgHolder:after {
+    padding-bottom: 70%;
+  }
+  #secAboutUs .secIntro .bgHolder .imgHolder {
+    height: 300px;
+  }
+  #secAboutUs .secClients .clientListing li {
+    width: 35%;
+  }
+  #secAboutUs .secClients .clientListing li.x4 {
+    width: 8%;
+  }
+  #secAboutUs .secClients .clientListing li.x10 {
+    width: 25%;
+  }
+  #secDefaultListing .secHeading {
+    padding: 200px 5% 0;
+  }
+  #secDefaultDetails .secHeading {
+    padding: 200px 5% 20px;
+  }
+  #secContactUs .secIntro .headingHolder {
+    margin: 200px var(--space12p) var(--space50) var(--space12p);
+  }
+}
